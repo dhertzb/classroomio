@@ -92,7 +92,6 @@
   >
     <div class="flex h-full flex-col">
       <div class="">
-        <OrgSelector />
 
         <ul class="my-2 mt-4 px-4">
           {#each menuItems as menuItem}
