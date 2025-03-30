@@ -131,23 +131,6 @@
       </div>
       <span class="flex-grow" />
 
-      {#if $isFreePlan}
-        <div
-          class="border-primary-700 mx-4 flex flex-col items-center justify-center gap-4 rounded-md border px-2 py-6 text-center transition-all ease-in-out hover:scale-95"
-        >
-          <img src="/upgrade.png" alt="upgrade" class="h-16 w-16" />
-          <span class="flex flex-col gap-1">
-            <p class="text-base font-semibold">{$t('org_navigation.early_adopter')}</p>
-            <p class="text-xs">{$t('org_navigation.unlock')}</p>
-          </span>
-          <PrimaryButton
-            label={$t('org_navigation.upgrade')}
-            onClick={openModal}
-            className="font-normal"
-          />
-        </div>
-      {/if}
-
       <ul class="my-5 px-4 pb-5">
         <a href={$currentOrgPath} class="text-black no-underline" on:click={toggleSidebar}>
           <li class="mb-2 flex items-center rounded px-2.5 py-1.5">
