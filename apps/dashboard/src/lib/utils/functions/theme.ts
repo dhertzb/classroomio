@@ -7,19 +7,12 @@ function updateThemeClassInBody(newClass: string, customRegex?: string) {
 }
 
 export function setTheme(_theme?: string) {
-  const theme = _theme || '';
-
-  // this condition checks if it's a hex code from the db or a specified theme
-  if (theme && !theme.includes('theme-')) {
-    // add the "custom-theme" styles to the head tag
-    injectCustomTheme(theme);
-
-    // add the "custom-theme" classname to the head tag
-    setCustomTheme('theme-custom');
-  } else if (!theme && document.body.className.includes('theme-')) {
-    // if no theme and a theme is already applied, remove it
+  // Always use the default theme (empty string) regardless of what's passed in
+  const theme = '';
+  
+  // if no theme and a theme is already applied, remove it
+  if (!theme && document.body.className.includes('theme-')) {
     updateThemeClassInBody(theme);
-
     return;
   }
 
@@ -32,16 +25,12 @@ export function setTheme(_theme?: string) {
 }
 
 export function setCustomTheme(theme?: string) {
-  // In case the default theme is added but another theme exists
-  if (!theme && document.body.className.includes('theme-')) {
-    updateThemeClassInBody(theme || '');
-    return;
-  }
-
+  // Always use empty string to prevent custom themes
+  const _theme = '';
+  
   // Remove any class starting with "theme-"
   updateThemeClassInBody('');
 
-  const _theme = theme || '';
   // Add the new theme if it doesn't already exist
   if (!document.body.className.includes(_theme)) {
     localStorage.setItem('theme', _theme);
