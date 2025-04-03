@@ -146,7 +146,7 @@
 </script>
 
 <svelte:head>
-  <title>Join ClassroomIO</title>
+  <title>Join SovietIO</title>
 </svelte:head>
 
 <AuthUI {supabase} isLogin={false} {handleSubmit} isLoading={loading} showLogo={true} bind:formRef>

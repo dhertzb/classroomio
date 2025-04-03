@@ -132,7 +132,7 @@ function isURLCustomDomain(url: URL) {
 
 function getBaseMetaTags(url: URL) {
   return Object.freeze({
-    title: 'ClassroomIO | The Open Source Learning Management System for Companies',
+    title: 'SovietIO | The Open Source Learning Management System for Companies',
     description:
       'A flexible, user-friendly platform for creating, managing, and delivering courses for companies and training organisations',
     canonical: new URL(url.pathname, url.origin).href,
@@ -140,14 +140,14 @@ function getBaseMetaTags(url: URL) {
       type: 'website',
       url: new URL(url.pathname, url.origin).href,
       locale: 'en_IE',
-      title: 'ClassroomIO | The Open Source Learning Management System for Companies',
+      title: 'SovietIO | The Open Source Learning Management System for Companies',
       description:
         'A flexible, user-friendly platform for creating, managing, and delivering courses for companies and training organisations',
-      siteName: 'ClassroomIO',
+      siteName: 'SovietIO',
       images: [
         {
           url: 'https://brand.cdn.clsrio.com/og/classroomio-og.png',
-          alt: 'ClassroomIO OG Image',
+          alt: 'SovietIO OG Image',
           width: 1920,
           height: 1080,
           secureUrl: 'https://brand.cdn.clsrio.com/og/classroomio-og.png',
@@ -159,11 +159,11 @@ function getBaseMetaTags(url: URL) {
       handle: '@classroomio',
       site: '@classroomio',
       cardType: 'summary_large_image' as const,
-      title: 'ClassroomIO | The Open Source Learning Management System for Companies',
+      title: 'SovietIO | The Open Source Learning Management System for Companies',
       description:
         'A flexible, user-friendly platform for creating, managing, and delivering courses for companies and training organisations',
       image: 'https://brand.cdn.clsrio.com/og/classroomio-og.png',
-      imageAlt: 'ClassroomIO OG Image'
+      imageAlt: 'SovietIO OG Image'
     }
   });
 }

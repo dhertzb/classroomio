@@ -1062,7 +1062,7 @@
     "discussion": "Discusión",
     "people": "Gente",
     "goto_lms": "Ir a LMS",
-    "goto_home": "Ir a la página de inicio de ClassroomIO",
+    "goto_home": "Ir a la página de inicio de SovietIO",
     "login": "Acceso",
     "signup": "Inscribirse",
     "redirecting": "Redireccionando",
@@ -1154,7 +1154,7 @@
     "integrations": {
       "heading": "Telegrama",
       "sub_heading": "Conecte su cuenta a Telegram para recibir notificaciones de cualquier cambio dentro de la aplicación.",
-      "step_authenticate": "Paso 1: autentica tu cuenta a través del bot ClassroomIO.",
+      "step_authenticate": "Paso 1: autentica tu cuenta a través del bot SovietIO.",
       "open_bot_button": "Abrir robot",
       "step_chatId": "Paso 2: Ingrese el ID de chat que le proporcionó el bot.",
       "connect_button": "Conectar",

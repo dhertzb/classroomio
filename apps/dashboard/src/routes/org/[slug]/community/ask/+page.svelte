@@ -82,7 +82,7 @@
 </script>
 
 <svelte:head>
-  <title>Ask the Community - ClassroomIO</title>
+  <title>Ask the Community - SovietIO</title>
 </svelte:head>
 
 <section class="w-full md:max-w-3xl md:mx-auto">

@@ -32,7 +32,7 @@
   <p class="text-black dark:text-white text-sm md:text-base lg:text-lg">
     {$t('welcome_modal.we_at')}
     <a href="https://app.classroomio.com/" class="text-primary-700 no-underline hover:no-underline"
-      >ClassroomIO</a
+      >SovietIO</a
     >
     {$t('welcome_modal.small_team')}
     <span class="text-primary-700">{$t('welcome_modal.thank_you')};</span>

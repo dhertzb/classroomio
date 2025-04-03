@@ -47,7 +47,7 @@
 
   onMount(() => {
     console.log(
-      'Welcome to ClassroomIO, we are grateful you chose us.',
+      'Welcome to SovietIO, we are grateful you chose us.',
       $page.url.host,
       `\nIs student domain: ${data.isOrgSite}`
     );

@@ -1154,7 +1154,7 @@
     "integrations": {
       "heading": "điện tín",
       "sub_heading": "Kết nối tài khoản của bạn với điện tín để nhận thông báo về bất kỳ thay đổi nào trong ứng dụng.",
-      "step_authenticate": "Bước 1: Xác thực tài khoản của bạn thông qua bot ClassroomIO.",
+      "step_authenticate": "Bước 1: Xác thực tài khoản của bạn thông qua bot SovietIO.",
       "open_bot_button": "Mở Bot",
       "step_chatId": "Bước 2: Nhập ID trò chuyện được bot cung cấp cho bạn.",
       "connect_button": "Kết nối",

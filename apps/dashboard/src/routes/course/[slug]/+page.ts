@@ -33,7 +33,7 @@ export const load = async ({ params = { slug: '' } }) => {
       title: data?.title,
       description: data?.description,
       image: data?.logo,
-      imageAlt: 'ClassroomIO OG Image'
+      imageAlt: 'SovietIO OG Image'
     }
   }) satisfies MetaTagsProps;
 

@@ -53,7 +53,7 @@ describe('Generate Site name', () => {
   });
 
   test('should return slug-like string with all uppercase characters converted to lowercase', () => {
-    const result = generateSitename('Classroom Org International');
+    const result = generateSitename('Soviet Org International');
     const expected = 'classroom-org-international';
     expect(result).toBe(expected);
   });

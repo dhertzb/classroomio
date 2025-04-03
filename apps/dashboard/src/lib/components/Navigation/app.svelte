@@ -83,7 +83,7 @@
         id="logo"
         class="text-lg line-clamp-1"
       >
-        {isCoursePage ? title : 'Formações - PCBR'}
+        {isCoursePage ? title : 'SovietIO'}
       </a>
     </div>
 

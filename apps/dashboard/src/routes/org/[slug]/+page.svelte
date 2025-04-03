@@ -89,7 +89,7 @@
 </script>
 
 <svelte:head>
-  <title>Dashboard - ClassroomIO</title>
+  <title>Dashboard - SovietIO</title>
 </svelte:head>
 
 <WelcomeModal />

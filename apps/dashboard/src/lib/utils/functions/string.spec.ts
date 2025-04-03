@@ -3,7 +3,7 @@ import { capitalizeFirstLetter } from './string';
 describe('capitalize first letter', () => {
   test('should return the same string with the first letter capitalized', () => {
     const result = capitalizeFirstLetter('classroom');
-    expect(result).toEqual('Classroom');
+    expect(result).toEqual('Soviet');
   });
 
   test('should return an empty string when given an empty string', () => {
@@ -23,6 +23,6 @@ describe('capitalize first letter', () => {
 
   test('should return the first letter of the first word capitalized when given a sentence', () => {
     const result = capitalizeFirstLetter('classroomio is an open source project');
-    expect(result).toEqual('Classroomio is an open source project');
+    expect(result).toEqual('Sovietio is an open source project');
   });
 });

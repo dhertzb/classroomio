@@ -97,7 +97,7 @@
 </script>
 
 <svelte:head>
-  <title>Courses - ClassroomIO</title>
+  <title>Courses - SovietIO</title>
 </svelte:head>
 
 <section class="w-full md:max-w-6xl md:mx-auto">

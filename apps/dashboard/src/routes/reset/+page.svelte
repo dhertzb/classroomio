@@ -51,7 +51,7 @@
 </script>
 
 <svelte:head>
-  <title>Join ClassroomIO</title>
+  <title>Join SovietIO</title>
 </svelte:head>
 
 <AuthUI

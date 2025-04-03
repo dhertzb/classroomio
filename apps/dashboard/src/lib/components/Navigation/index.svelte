@@ -27,13 +27,13 @@
     <div class="logo">
       <a
         href="/"
-        title={`${$t('navigation.goto')} ${orgName || 'ClassroomIO'} ${$t('navigation.home')}`}
+        title={`${$t('navigation.goto')} ${orgName || 'SovietIO'} ${$t('navigation.home')}`}
         id="logo"
         data-hveid="8"
       >
         <img
           src={logo || '/logo-192.png'}
-          alt={`${orgName || 'ClassroomIO'} logo`}
+          alt={`${orgName || 'SovietIO'} logo`}
           class="rounded w-9 inline-block mx-auto"
           data-atf="1"
         />
