@@ -30,7 +30,7 @@ export const load = async ({ url, cookies, request }): Promise<LoadOutput> => {
     skipAuth: false,
     org: null,
     baseMetaTags: getBaseMetaTags(url),
-    serverLang: request.headers?.get('accept-language') || ''
+    serverLang: 'pt'
   };
 
   console.log('IS_SELFHOSTED', IS_SELFHOSTED);
@@ -139,7 +139,7 @@ function getBaseMetaTags(url: URL) {
     openGraph: {
       type: 'website',
       url: new URL(url.pathname, url.origin).href,
-      locale: 'en_IE',
+      locale: 'pt_BR',
       title: 'SovietIO | The Open Source Learning Management System for Companies',
       description:
         'A flexible, user-friendly platform for creating, managing, and delivering courses for companies and training organisations',

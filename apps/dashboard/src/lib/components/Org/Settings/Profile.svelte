@@ -11,7 +11,6 @@
   import { profile } from '$lib/utils/store/user';
   import { Column, Grid, Row } from 'carbon-components-svelte';
   import SectionTitle from '../SectionTitle.svelte';
-  import LanguagePicker from './LanguagePicker.svelte';
 
   let avatar = '';
   let loading = false;
@@ -115,7 +114,6 @@
         className="w-full lg:w-60 mb-4"
         errorMessage={$t(errors.email)}
       />
-      <LanguagePicker bind:hasLangChanged bind:value={locale} className="w-full lg:w-60 mb-4" />
     </Column>
   </Row>
 

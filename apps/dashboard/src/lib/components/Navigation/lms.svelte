@@ -50,26 +50,10 @@
       <a
         href={$page.url.pathname}
         title={$t('navigation.goto_home')}
-        id="logo"
         class="text-lg flex items-center"
       >
-        {#if $currentOrg.avatar_url}
-          <Avatar
-            src={$currentOrg.avatar_url}
-            name={$currentOrg.name}
-            shape="rounded-md"
-            width="w-7"
-            height="h-7"
-            className="mr-2"
-          />
-        {:else}
-          <TextChip
-            value={shortenName($currentOrg.name)}
-            className="bg-primary-200 font-bold mr-2 dark:text-black"
-          />
-        {/if}
         <span class="line-clamp-1">
-          {$currentOrg.name}
+          ☭ SovietIO
         </span>
       </a>
     </div>

@@ -128,7 +128,7 @@
             </a>
           </h4>
           <span class="text-gray-600 dark:text-white">
-            {discussion.author} asked {discussion.createdAt}
+            {discussion.author} {$t('community.asked')} {discussion.createdAt}
           </span>
           <a class="m-0" href="/courses/{discussion.courseId}">
             <span class="text-primary-200 text-primary-700 p-0 text-xs dark:text-black">

@@ -9,7 +9,6 @@
   import { snackbar } from '$lib/components/Snackbar/store';
   import generateUUID from '$lib/utils/functions/generateUUID';
   import { t } from '$lib/utils/functions/translations';
-  import LanguagePicker from '$lib/components/Org/Settings/LanguagePicker.svelte';
   import { handleLocaleChange } from '$lib/utils/functions/translations';
 
   let avatar = '';
@@ -103,11 +102,6 @@
         className="w-full lg:w-60 mb-4"
       />
 
-      <LanguagePicker
-        bind:hasLangChanged
-        bind:value={$profile.locale}
-        className="w-full lg:w-60 mb-4"
-      />
     </Column>
   </Row>
   <Row class="m-5 w-full flex items-center gap-2 lg:justify-center">

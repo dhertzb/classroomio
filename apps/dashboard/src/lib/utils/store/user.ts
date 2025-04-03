@@ -46,7 +46,7 @@ export const defaultProfileState: ProfileStore = {
   goal: '',
   source: '',
   telegram_chat_id: null,
-  locale: LOCALE.EN,
+  locale: LOCALE.PT,
   is_email_verified: false,
   verified_at: ''
 };

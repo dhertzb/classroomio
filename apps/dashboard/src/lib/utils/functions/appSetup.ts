@@ -75,12 +75,6 @@ export async function getProfile({
     return goto('/login?redirect=/' + path + queryParam);
   }
 
-  // Skip refetching profile, if already in store
-  if (profileStore.id) {
-    handleLocaleChange(profileStore.locale);
-    return;
-  }
-
   // Check if user has profile
   let {
     data: profileData,
@@ -92,6 +86,7 @@ export async function getProfile({
     .eq('id', authUser?.id)
     .single();
   console.log('Get profile', profileData);
+  handleLocaleChange('pt');
 
   if (error && !profileData && status === 406 && authUser) {
     // User wasn't found, create profile
@@ -127,7 +122,6 @@ export async function getProfile({
       setAnalyticsUser();
 
       // Fetch language
-      handleLocaleChange(newProfileData[0].locale);
 
       if (isOrgSite) {
         const { data, error } = await supabase
@@ -182,7 +176,6 @@ export async function getProfile({
     // Set user in sentry
     setAnalyticsUser();
 
-    handleLocaleChange(profileData.locale);
 
     const orgRes = await getOrganizations(profileData.id, isOrgSite, orgSiteName);
 
