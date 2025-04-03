@@ -121,12 +121,6 @@
       </div>
       <span class="flex-grow" />
       <ul class="my-5 pb-5 px-4">
-        <a href="/lms" class="text-black" on:click={toggleSidebar}>
-          <li class="flex items-center py-3 px-4 mb-2 rounded">
-            <HelpIcon size={20} class="carbon-icon dark:text-white" />
-            <p class="dark:text-white ml-2">{$t('lms_navigation.help')}</p>
-          </li>
-        </a>
         <button
           class="w-full"
           on:click={() => {

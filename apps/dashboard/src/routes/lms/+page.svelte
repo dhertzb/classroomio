@@ -59,7 +59,6 @@
         {$profile.fullname}!
       </h1>
 
-      <VisitOrgSiteButton isLMS={true} />
     </div>
 
     <div

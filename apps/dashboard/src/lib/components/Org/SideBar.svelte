@@ -71,14 +71,8 @@
       path: '/audience',
       label: $t('org_navigation.audience'),
       isActive: $page.url.pathname.includes(`${$currentOrgPath}/audience`),
-      show: true
+      show:  $isOrgAdmin
     },
-    {
-      path: '/setup',
-      label: $t('org_navigation.setup'),
-      isActive: $page.url.pathname.includes(`${$currentOrgPath}/setup`),
-      show: $isOrgAdmin
-    }
   ];
 </script>
 
@@ -131,13 +125,6 @@
       <span class="flex-grow" />
 
       <ul class="my-5 px-4 pb-5">
-        <a href={$currentOrgPath} class="text-black no-underline" on:click={toggleSidebar}>
-          <li class="mb-2 flex items-center rounded px-2.5 py-1.5">
-            <HelpIcon size={20} class="carbon-icon dark:text-white" />
-            <p class="ml-2.5 text-sm font-medium dark:text-white">{$t('org_navigation.help')}</p>
-          </li>
-        </a>
-
         <button
           class="w-full"
           on:click={() => {

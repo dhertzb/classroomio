@@ -182,7 +182,7 @@
     "any_course": "Qualquer curso que você concluir será exibido aqui"
   },
   "lms_navigation": {
-    "home": "Lar",
+    "home": "Início",
     "my_learning": "Meu aprendizado",
     "exercise": "Exercício",
     "community": "Comunidade",
@@ -789,7 +789,7 @@
         "drag": "arraste um cartão para reordenar",
         "no_lesson": "Ainda não há aulas",
         "share_your_knowledge": "Compartilhe seu conhecimento com o mundo criando aulas envolventes. Comece clicando no botão Adicionar.",
-        "heading_v2": "Contente",
+        "heading_v2": "Conteúdo",
         "section_prompt": {
           "cta": "Habilitar seções",
           "header": "Habilitar seções",
@@ -835,7 +835,7 @@
       "nav_certificates": "Certificados",
       "nav_landing_page": "Página inicial",
       "nav_settings": "Configurações",
-      "nav_content": "Contente"
+      "nav_content": "Conteúdo"
     },
     "not_permitted": {
       "header": "Sem permissão",
@@ -1056,7 +1056,7 @@
   "navigation": {
     "goto": "Vá para",
     "courses": "Cursos",
-    "home": "Lar",
+    "home": "Início",
     "classroomio_home": "Página inicial do ClassroomIO",
     "dashboard": "Painel",
     "discussion": "Discussão",
@@ -1217,7 +1217,7 @@
       "about": {
         "heading": "Sobre",
         "title": "Título",
-        "content": "Contente",
+        "content": "Conteúdo",
         "upload_an_image": "Carregar uma imagem",
         "select_image": "Selecione a imagem"
       },

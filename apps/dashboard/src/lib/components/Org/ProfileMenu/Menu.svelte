@@ -92,69 +92,6 @@
     </div>
   {/if}
 
-  <div class="border-b py-3 space-y-4">
-    <p class="text-xs font-semibold text-gray-500">{$t('profileMenu.free_tools')}</p>
-    <a
-      href="https://classroomio.com/tools/progress"
-      target="_blank"
-      class="flex items-center gap-2"
-      on:click={closeMenu}
-    >
-      <img src="/progress.svg" alt="progress" class="h-6 w-6 rounded-full" />
-      <p class="text-sm font-semibold">{$t('profileMenu.progress')}</p>
-    </a>
-    <a
-      href="https://classroomio.com/tools/activity-stopwatch"
-      target="_blank"
-      class=" flex items-center gap-2"
-      on:click={closeMenu}
-    >
-      <img src="/timer.svg" alt="timer" class="h-6 w-6 rounded-full" />
-      <p class="text-sm font-semibold">{$t('profileMenu.timer')}</p>
-    </a>
-    <a
-      href="https://classroomio.com/tools/tic-tac-toe"
-      target="_blank"
-      class=" flex items-center gap-2"
-      on:click={closeMenu}
-    >
-      <img src="/tictac.svg" alt="tic_tac_toe" class="h-6 w-6 rounded-full" />
-      <p class="text-sm font-semibold">{$t('profileMenu.tic_tac')}</p>
-    </a>
-    <a
-      href="https://classroomio.com/tools"
-      on:click={closeMenu}
-      target="_blank"
-      class="flex ml-auto w-fit items-center justify-end"
-    >
-      <div class="text-blue-900 font-semibold text-xs flex items-center gap-1">
-        {$t('profileMenu.see_more')}
-        <ChevronDown class="text-blue-900" />
-      </div>
-    </a>
-  </div>
-  {#if !$globalStore.isOrgSite}
-    <div class="border-b py-3 space-y-4">
-      <a
-        href="https://classroomio.com/roadmap"
-        target="_blank"
-        on:click={closeMenu}
-        class="hover:no-underline flex items-center gap-2"
-      >
-        <NewTab />
-        <p class="text-sm font-semibold">{$t('profileMenu.whats_new')}</p>
-      </a>
-      <a
-        href="https://classroomio.com/blog/launch-week"
-        target="_blank"
-        on:click={closeMenu}
-        class="hover:no-underline flex items-center gap-2"
-      >
-        <Rocket />
-        <p class="text-sm font-semibold">{$t('profileMenu.launch_week')}</p>
-      </a>
-    </div>
-  {/if}
 
   <button on:click={logout} class="w-full pt-3 space-y-4">
     <span class="flex items-center gap-2">

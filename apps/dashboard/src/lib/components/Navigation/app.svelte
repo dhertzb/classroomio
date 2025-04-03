@@ -83,7 +83,7 @@
         id="logo"
         class="text-lg line-clamp-1"
       >
-        {isCoursePage ? title : 'ClassroomIO'}
+        {isCoursePage ? title : 'Formações - PCBR'}
       </a>
     </div>
 

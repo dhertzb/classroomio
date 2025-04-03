@@ -101,6 +101,7 @@
       {$profile.fullname}!
     </h1>
     <div class="flex items-center">
+     {#if !$isOrgAdmin}
       <PrimaryButton
         variant={VARIANTS.OUTLINED}
         onClick={createCourse}
@@ -113,6 +114,7 @@
           {$t('dashboard.create_course')}
         {/if}
       </PrimaryButton>
+    {/if}
 
       <VisitOrgSiteButton />
     </div>
