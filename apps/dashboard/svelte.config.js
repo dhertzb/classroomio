@@ -1,6 +1,5 @@
+import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/kit/vite';
-import adapterAuto from '@sveltejs/adapter-auto';
-import adapterNode from '@sveltejs/adapter-node';
 import path from 'path';
 
 import 'dotenv/config';
@@ -15,7 +14,7 @@ const config = {
   preprocess: [vitePreprocess({})],
 
   kit: {
-    adapter: useNodeAdapter ? adapterNode() : adapterAuto(),
+    adapter: adapter(),
     alias: {
       $lib: path.resolve('./src/lib'),
       $mail: path.resolve('./src/mail')
