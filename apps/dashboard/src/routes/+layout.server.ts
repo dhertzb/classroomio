@@ -23,7 +23,13 @@ interface LoadOutput {
 
 const APP_SUBDOMAINS = env.PRIVATE_APP_SUBDOMAINS.split(',');
 
-export const load = async ({ url, cookies, request }): Promise<LoadOutput> => {
+export const load = async ({ url, cookies, request }) => {
+  console.log('=== Iniciando load() em +layout.server.ts ===');
+  console.log('URL completa:', url.href);
+  console.log('Host:', url.host);
+  console.log('Pathname:', url.pathname);
+  console.log('Search params:', url.searchParams.toString());
+
   const response: LoadOutput = {
     orgSiteName: '',
     isOrgSite: false,
@@ -33,88 +39,96 @@ export const load = async ({ url, cookies, request }): Promise<LoadOutput> => {
     serverLang: 'pt'
   };
 
-  console.log('IS_SELFHOSTED', IS_SELFHOSTED);
+  console.log('Valores iniciais:', {
+    isOrgSite: response.isOrgSite,
+    orgSiteName: response.orgSiteName,
+    skipAuth: response.skipAuth
+  });
 
-  // Selfhosted usecase would be here
+  // Selfhosted logic
   if (IS_SELFHOSTED === 'true') {
+    console.log('Modo selfhosted ativado');
     const subdomain = getSubdomain(url);
-    console.log('subdomain', subdomain);
+    console.log('Subdomínio detectado:', subdomain);
 
-    // Student dashboard
     if (subdomain) {
+      console.log('Processando subdomínio para organização...');
       const org = (await getCurrentOrg(subdomain, true)) || null;
+      console.log('Organização encontrada:', org);
 
-      // Organization by subdomain not found
       if (!org) {
+        console.log('Organização não encontrada para subdomínio:', subdomain);
         return response;
       }
 
       response.org = org;
       response.isOrgSite = true;
       response.orgSiteName = subdomain;
+      console.log('Configuração selfhosted aplicada:', {
+        isOrgSite: response.isOrgSite,
+        orgSiteName: response.orgSiteName
+      });
     }
-
     return response;
   }
 
-  const isLocalHost = url.host.includes('localhost');
-
-  const tempSiteName = url.searchParams.get('org');
-
-  if (isLocalHost && tempSiteName) {
-    console.log('setting sitename temp');
-    cookies.set('_orgSiteName', tempSiteName, {
-      path: '/'
-    });
-  }
-
-  const _orgSiteName = cookies.get('_orgSiteName');
-  const debugPlay = cookies.get('debugPlay');
-  const debugMode = _orgSiteName && _orgSiteName !== 'false';
-
-  const subdomain = getSubdomain(url) || '';
-
-  const isDev = dev || isLocalHost;
-
+  console.log('Verificando domínio personalizado...');
   if (isURLCustomDomain(url)) {
-    // Custom domain
+    console.log('Domínio personalizado detectado');
     response.org = (await getCurrentOrg(url.host, true, true)) || null;
-
-    console.log('custom domain response.org', response.org);
+    console.log('Organização para domínio personalizado:', response.org);
 
     if (!response.org) {
+      console.log('Redirecionando para página 404 (organização não encontrada)');
       throw redirect(307, 'https://app.classroomio.com/404?type=org');
     }
 
     response.isOrgSite = true;
     response.orgSiteName = response.org?.siteName || '';
+    console.log('Configuração de domínio personalizado aplicada:', {
+      isOrgSite: response.isOrgSite,
+      orgSiteName: response.orgSiteName
+    });
     return response;
-  } else if (!blockedSubdomain.includes(subdomain)) {
+  }
+
+  const subdomain = getSubdomain(url) || '';
+  console.log('Subdomínio detectado:', subdomain);
+
+  if (!blockedSubdomain.includes(subdomain)) {
+    console.log('Subdomínio não está bloqueado');
     if (APP_SUBDOMAINS.includes(subdomain)) {
-      // This is an app domain specified in the .env file
+      console.log('Subdomínio é um app domain (ignorando)');
       return response;
     }
 
-    const answer = !!subdomain;
-
-    console.log('subdomain', subdomain);
-
-    response.isOrgSite = debugMode || answer;
-    response.orgSiteName = debugMode ? _orgSiteName : subdomain;
+    response.isOrgSite = !!subdomain;
+    response.orgSiteName = subdomain;
     response.org = (await getCurrentOrg(response.orgSiteName, true)) || null;
+    console.log('Configuração de subdomínio aplicada:', {
+      isOrgSite: response.isOrgSite,
+      orgSiteName: response.orgSiteName,
+      org: response.org
+    });
 
-    if (!response.org && !isDev) {
-      throw redirect(307, 'https://app.classroomio.com/404?type=org');
-    } else if (!response.org && _orgSiteName) {
-      cookies.delete('_orgSiteName');
+    if (!response.org) {
+      console.log('Organização não encontrada para subdomínio');
+      if (!dev) {
+        console.log('Redirecionando para página 404 (produção)');
+        throw redirect(307, 'https://app.classroomio.com/404?type=org');
+      }
     }
-  } else if (subdomain === 'play' || debugPlay === 'true') {
+  } else if (subdomain === 'play') {
+    console.log('Modo play ativado (skipAuth=true)');
     response.skipAuth = true;
-  } else if (!APP_SUBDOMAINS.includes(subdomain) && !isDev) {
-    // This case is for anything in our blockedSubdomains
-    throw redirect(307, 'https://app.classroomio.com');
   }
 
+  console.log('=== Finalizando load() ===', {
+    isOrgSite: response.isOrgSite,
+    orgSiteName: response.orgSiteName,
+    skipAuth: response.skipAuth,
+    org: !!response.org
+  });
   return response;
 };
 

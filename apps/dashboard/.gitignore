@@ -19,3 +19,4 @@ package-lock.json
 /_supascripts/
 data.sql
 changes.sql
+.vercel
