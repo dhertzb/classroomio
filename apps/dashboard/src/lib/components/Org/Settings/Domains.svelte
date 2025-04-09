@@ -7,7 +7,6 @@
   import isValidDomain from 'is-valid-domain';
   import { parse } from 'tldts';
 
-  import VisitOrgSiteButton from '$lib/components/Buttons/VisitOrgSite.svelte';
   import TextChip from '$lib/components/Chip/Text.svelte';
   import ComingSoon from '$lib/components/ComingSoon/index.svelte';
   import TextArea from '$lib/components/Form/TextArea.svelte';
@@ -240,8 +239,6 @@
             onClick={handleSaveSiteName}
             isDisabled={isLoading}
           />
-
-          <VisitOrgSiteButton />
         </div>
       </div>
     </Column>

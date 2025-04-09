@@ -17,7 +17,6 @@
   import UserMultiple from 'carbon-icons-svelte/lib/UserMultiple.svelte';
 
   import Avatar from '$lib/components/Avatar/index.svelte';
-  import VisitOrgSiteButton from '$lib/components/Buttons/VisitOrgSite.svelte';
   import { VARIANTS } from '$lib/components/PrimaryButton/constants';
   import PrimaryButton from '$lib/components/PrimaryButton/index.svelte';
   import WelcomeModal from '$lib/components/WelcomeModal/WelcomeModal.svelte';
@@ -101,22 +100,20 @@
       {$profile.fullname}!
     </h1>
     <div class="flex items-center">
-     {#if !$isOrgAdmin}
-      <PrimaryButton
-        variant={VARIANTS.OUTLINED}
-        onClick={createCourse}
-        isDisabled={!$isOrgAdmin}
-        className="min-h-[36px]"
-      >
-        {#if $isMobile}
-          <Add size={24} />
-        {:else}
-          {$t('dashboard.create_course')}
-        {/if}
-      </PrimaryButton>
-    {/if}
-
-      <VisitOrgSiteButton />
+      {#if !$isOrgAdmin}
+        <PrimaryButton
+          variant={VARIANTS.OUTLINED}
+          onClick={createCourse}
+          isDisabled={!$isOrgAdmin}
+          className="min-h-[36px]"
+        >
+          {#if $isMobile}
+            <Add size={24} />
+          {:else}
+            {$t('dashboard.create_course')}
+          {/if}
+        </PrimaryButton>
+      {/if}
     </div>
   </div>
 
