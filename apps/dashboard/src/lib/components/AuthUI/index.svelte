@@ -1,12 +1,9 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import Avatar from '$lib/components/Avatar/index.svelte';
-  import { VARIANTS } from '$lib/components/PrimaryButton/constants';
-  import PrimaryButton from '$lib/components/PrimaryButton/index.svelte';
   import { t } from '$lib/utils/functions/translations';
   import { currentOrg } from '$lib/utils/store/org';
   import type { SupabaseClient } from '@supabase/supabase-js';
-  import GoogleIconColored from '../Icons/GoogleIconColored.svelte';
 
   export let supabase: SupabaseClient;
   export let handleSubmit = () => {};
@@ -15,7 +12,7 @@
   export let isLoading = false;
   export let showLogo = false;
   export let formRef;
-  export let hideGoogleAuth = false;
+  // export let hideGoogleAuth = false;
 
   async function signInWithGoogle() {
     if (isLoading) {
@@ -75,7 +72,7 @@
       >
         <slot />
       </form>
-      {#if !showOnlyContent && !hideGoogleAuth}
+      <!-- {#if !showOnlyContent && !hideGoogleAuth}
         <div class="mb-3 w-10/12">
           <p class="mb-5 text-sm dark:text-white">{$t('login.signup_with')}:</p>
           <PrimaryButton
@@ -90,7 +87,7 @@
             </span>
           </PrimaryButton>
         </div>
-      {/if}
+      {/if} -->
     </div>
     {#if !showOnlyContent}
       <div class="border-grey w-full border-t p-6 text-center">
