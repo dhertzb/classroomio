@@ -35,15 +35,19 @@
   let redirect = query.get('redirect');
 
   async function handleSubmit() {
+    console.log('Starting signup process');
+    console.log('Form fields:', fields);
     const validationRes = authValidation(fields);
-    console.log('validationRes', validationRes);
+    console.log('Validation result:', validationRes);
 
     if (Object.keys(validationRes).length) {
+      console.log('Validation errors found:', validationRes);
       errors = Object.assign(errors, validationRes);
       return;
     }
 
     try {
+      console.log('Attempting to sign up user');
       loading = true;
 
       const {
@@ -53,21 +57,34 @@
         email: fields.email,
         password: fields.password
       });
-      console.log('session', session);
 
-      if (error) throw error;
+      if (error) {
+        console.error('Signup error:', error);
+        throw error;
+      }
 
       const { user: authUser } = session || {};
       if (!authUser) {
+        console.error('No auth user created');
         throw 'Error creating user';
       }
 
-      if (!$currentOrg.id) return;
+      console.log('Auth user created:', authUser);
+
+      if (!$currentOrg.id) {
+        console.log('No current org ID, skipping org-related steps');
+        return;
+      }
 
       const [regexUsernameMatch] = [...(authUser.email?.matchAll(/(.*)@/g) || [])];
+      console.log('Username match:', regexUsernameMatch);
+
+      console.log('Fetching IP metadata');
       const response = await fetch('https://api.ipregistry.co/?key=tryout');
       const metadata = await response.json();
+      console.log('IP metadata:', metadata);
 
+      console.log('Creating profile in database');
       const profileRes = await supabase
         .from('profile')
         .insert({
@@ -78,16 +95,17 @@
           metadata
         })
         .select();
-      console.log('profileRes', profileRes);
+      console.log('Profile creation result:', profileRes);
 
       if (profileRes.error) {
+        console.error('Profile creation error:', profileRes.error);
         throw profileRes.error;
       }
 
-      // Setting profile
-      console.log('setting profile', profileRes.data[0]);
+      console.log('Setting profile in store:', profileRes.data[0]);
       profile.set(profileRes.data[0]);
 
+      console.log('Capturing posthog events');
       capturePosthogEvent('user_signed_up', {
         distinct_id: $profile.id || '',
         email: authUser.email,
@@ -96,6 +114,7 @@
       });
 
       if ($globalStore.isOrgSite) {
+        console.log('Capturing student signup event');
         capturePosthogEvent('student_signed_up', {
           distinct_id: $profile.id || '',
           email: authUser.email,
@@ -104,9 +123,12 @@
         });
       }
 
+      console.log('Signup successful, redirecting...');
       if (redirect) {
+        console.log('Redirecting to:', redirect);
         goto(redirect);
       } else {
+        console.log('Redirecting to login page');
         goto('/login');
       }
 
@@ -114,11 +136,14 @@
       success = true;
       fields = Object.assign({}, SIGNUP_FIELDS);
     } catch (error: any) {
+      console.error('Signup process failed:', error);
       submitError = error?.error_description || error?.message;
       loading = false;
     }
   }
 
+  $: console.log('Confirm password error:', errors.confirmPassword);
+  $: console.log('Submit disabled:', disableSubmit);
   $: errors.confirmPassword = getConfirmPasswordError(fields);
   $: disableSubmit = getDisableSubmit(fields);
 </script>
