@@ -50,10 +50,7 @@
       console.log('Attempting to sign up user');
       loading = true;
 
-      const {
-        data: { session },
-        error
-      } = await supabase.auth.signUp({
+      const { data, error } = await supabase.auth.signUp({
         email: fields.email,
         password: fields.password
       });
@@ -63,7 +60,8 @@
         throw error;
       }
 
-      const { user: authUser } = session || {};
+      const authUser = data.user;
+
       if (!authUser) {
         console.error('No auth user created');
         throw 'Error creating user';
