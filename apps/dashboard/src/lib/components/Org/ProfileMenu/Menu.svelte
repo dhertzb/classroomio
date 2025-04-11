@@ -62,7 +62,7 @@
       </div>
     </a>
   </div>
-  {#if $profile.role === 'admin'}
+  {#if !$globalStore.isOrgSite}
     <div class="space-y-4 border-b py-3">
       <p class="text-xs font-semibold text-gray-500">{$t('profileMenu.current_org')}</p>
       <a
