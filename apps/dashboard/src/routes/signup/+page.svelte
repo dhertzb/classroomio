@@ -16,7 +16,6 @@
   import { capturePosthogEvent } from '$lib/utils/services/posthog';
   import { globalStore } from '$lib/utils/store/app';
   import { currentOrg } from '$lib/utils/store/org';
-  import { profile } from '$lib/utils/store/user';
 
   let supabase = getSupabase();
   let fields = Object.assign({}, SIGNUP_FIELDS);
@@ -77,47 +76,19 @@
       const [regexUsernameMatch] = [...(authUser.email?.matchAll(/(.*)@/g) || [])];
       console.log('Username match:', regexUsernameMatch);
 
-      console.log('Fetching IP metadata');
-      const response = await fetch('https://api.ipregistry.co/?key=tryout');
-      const metadata = await response.json();
-      console.log('IP metadata:', metadata);
-
-      console.log('Creating profile in database');
-      const profileRes = await supabase
-        .from('profile')
-        .insert({
-          id: authUser.id,
-          username: regexUsernameMatch[1] + `${new Date().getTime()}`,
-          fullname: regexUsernameMatch[1],
-          email: authUser.email,
-          metadata
-        })
-        .select();
-      console.log('Profile creation result:', profileRes);
-
-      if (profileRes.error) {
-        console.error('Profile creation error:', profileRes.error);
-        throw profileRes.error;
-      }
-
-      console.log('Setting profile in store:', profileRes.data[0]);
-      profile.set(profileRes.data[0]);
-
       console.log('Capturing posthog events');
       capturePosthogEvent('user_signed_up', {
-        distinct_id: $profile.id || '',
+        distinct_id: authUser.id,
         email: authUser.email,
-        username: regexUsernameMatch[1],
-        metadata
+        username: regexUsernameMatch[1]
       });
 
       if ($globalStore.isOrgSite) {
         console.log('Capturing student signup event');
         capturePosthogEvent('student_signed_up', {
-          distinct_id: $profile.id || '',
+          distinct_id: authUser.id,
           email: authUser.email,
-          username: regexUsernameMatch[1],
-          metadata
+          username: regexUsernameMatch[1]
         });
       }
 
