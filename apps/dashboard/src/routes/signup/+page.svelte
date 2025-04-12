@@ -15,7 +15,6 @@
   } from '$lib/utils/functions/validator';
   import { capturePosthogEvent } from '$lib/utils/services/posthog';
   import { globalStore } from '$lib/utils/store/app';
-  import { currentOrg } from '$lib/utils/store/org';
 
   let supabase = getSupabase();
   let fields = Object.assign({}, SIGNUP_FIELDS);
@@ -67,11 +66,6 @@
       }
 
       console.log('Auth user created:', authUser);
-
-      if (!$currentOrg.id) {
-        console.log('No current org ID, skipping org-related steps');
-        return;
-      }
 
       const [regexUsernameMatch] = [...(authUser.email?.matchAll(/(.*)@/g) || [])];
       console.log('Username match:', regexUsernameMatch);
