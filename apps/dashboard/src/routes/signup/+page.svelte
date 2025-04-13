@@ -112,14 +112,14 @@
 </script>
 
 <svelte:head>
-  <title>Join SovietIO</title>
+  <title>{$t('login.create_to_join')}</title>
 </svelte:head>
 
 <SenjaEmbed id="aa054658-1e15-4d00-8920-91f424326c4e" />
 
 <AuthUI {supabase} isLogin={false} {handleSubmit} isLoading={loading} bind:formRef>
   <div class="mt-4 w-full">
-    <p class="mb-6 text-lg font-semibold dark:text-white">Create a free account</p>
+    <p class="mb-6 text-lg font-semibold dark:text-white">{$t('login.create_to_join')}</p>
     <!-- <TextField
       label="Full Name"
       bind:value={fields.name}
