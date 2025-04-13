@@ -27,11 +27,6 @@ export const config = {
       loader: async () => (await import('../translations/pt.json')).default
     },
     {
-      locale: 'de',
-      key: '',
-      loader: async () => (await import('../translations/de.json')).default
-    },
-    {
       locale: 'vi',
       key: '',
       loader: async () => (await import('../translations/vi.json')).default
