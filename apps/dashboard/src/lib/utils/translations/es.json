@@ -1304,6 +1304,7 @@
   },
   "login": {
     "welcome": "Bienvenido de nuevo",
+    "welcome_back_to": "Bienvenido de nuevo a",
     "email": "Tu correo electrónico",
     "password": "Tu contraseña",
     "forgot": "¿Has olvidado tu contraseña?",

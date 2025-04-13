@@ -1304,6 +1304,7 @@
   },
   "login": {
     "welcome": "Chào mừng trở lại",
+    "welcome_back_to": "Chào mừng trở lại với",
     "email": "Email của bạn",
     "password": "Mật khẩu của bạn",
     "forgot": "Quên mật khẩu?",

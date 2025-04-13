@@ -258,8 +258,7 @@
         "reports": "Stellen Sie Benotungsberichte für den Unterricht zur Verfügung",
         "disabled": "Deaktiviert",
         "enabled": "Ermöglicht",
-        "order": "Registerkarte „Lektionen bestellen“.",
-        "drag": "Ziehen Sie die Beschriftungen per Drag-and-Drop, um Ihre Materialregisterkarten neu anzuordnen",
+        "order": "Registerkarte „Lektionen bestellen".".,"drag": "Ziehen Sie die Beschriftungen per Drag-and-Drop, um Ihre Materialregisterkarten neu anzuordnen",
         "lesson_download": "Lektionen herunterladen",
         "available": "Stellen Sie die Lektion für registrierte Studierende zum Download im PDF-Format zur Verfügung",
         "course_download": "Kurs-Download",
@@ -536,8 +535,7 @@
         "no_link": "Keine Verbindung",
         "no_tutor": "Kein Tutor hinzugefügt",
         "body_header": "Noch kein Unterricht",
-        "body_content": "Teilen Sie Ihr Wissen mit der Welt, indem Sie ansprechende Lektionen erstellen. Klicken Sie zunächst auf die Schaltfläche „Hinzufügen“.",
-        "download_pdf": "PDF Herunterladen",
+        "body_content": "Teilen Sie Ihr Wissen mit der Welt, indem Sie ansprechende Lektionen erstellen. Klicken Sie zunächst auf die Schaltfläche „Hinzufügen".","download_pdf": "PDF Herunterladen",
         "autosaving": "Automatisches Speichern...",
         "done": "Erledigt",
         "edit": "Bearbeiten",
@@ -694,8 +692,7 @@
             "add_note": "Bitte fügen Sie eine Notiz hinzu, um diese Funktion zu nutzen",
             "generate": "Generieren",
             "completion": "KI-Generierung abgeschlossen",
-            "click_generate": "Klicken Sie für etwas Magie auf „Generieren“.",
-            "options": {
+            "click_generate": "Klicken Sie für etwas Magie auf „Generieren".","options": {
               "from_scratch": "Von Grund auf neu",
               "from_scratch_subtitle": "Erstellen Sie Ihre Übung von Grund auf, wenn Sie Ihre Fragen bereits vorbereitet haben",
               "use_template": "Verwenden Sie eine Vorlage",
@@ -788,8 +785,7 @@
         },
         "drag": "Ziehen Sie eine Karte, um sie neu anzuordnen",
         "no_lesson": "Noch kein Unterricht",
-        "share_your_knowledge": "Teilen Sie Ihr Wissen mit der Welt, indem Sie ansprechende Lektionen erstellen. Klicken Sie zunächst auf die Schaltfläche „Hinzufügen“.",
-        "heading_v2": "Inhalt",
+        "share_your_knowledge": "Teilen Sie Ihr Wissen mit der Welt, indem Sie ansprechende Lektionen erstellen. Klicken Sie zunächst auf die Schaltfläche „Hinzufügen".","heading_v2": "Inhalt",
         "section_prompt": {
           "cta": "Abschnitte aktivieren",
           "header": "Abschnitte aktivieren",
@@ -802,8 +798,7 @@
       "news_feed": {
         "heading": "Neuigkeiten",
         "body_header": "Noch kein Beitrag",
-        "body_content": "Verfassen Sie einen Beitrag für Ihre Klasse. Klicken Sie zunächst auf die Schaltfläche „Hinzufügen“.",
-        "pinned": "Angepinnt",
+        "body_content": "Verfassen Sie einen Beitrag für Ihre Klasse. Klicken Sie zunächst auf die Schaltfläche „Hinzufügen".","pinned": "Angepinnt",
         "snackbar": {
           "comment_deleted": "Kommentar gelöscht",
           "reaction_error": "Beim Reagieren auf den Newsfeed ist ein Fehler aufgetreten",
@@ -954,7 +949,8 @@
         "title": "Benutzerdefinierten Domain",
         "save": "Speichern",
         "your_domain": "Ihre Domain",
-        "custom_domain_error": "Sie können eine Top-Level-Domain nicht als benutzerdefinierte Domain hinzufügen. Verwenden Sie stattdessen eine Subdomain wie „Kurse.[IhreWebsite].com“ oder „www.[IhreWebsite].com“.",
+        "custom_domain_error": "Sie können eine Top-Level-Domain nicht als benutzerdefinierte Domain hinzufügen. Verwenden Sie stattdessen eine Subdomain wie „Kurse.[IhreWebsite].com" oder „www.[IhreWebsite
+        ].com".",
         "custom_domain_success": "Benutzerdefinierte Domäne erfolgreich hinzugefügt",
         "dns_description": "Legen Sie bei Ihrem DNS-Anbieter den folgenden Eintrag fest, um fortzufahren:",
         "dns_type": "Typ",
@@ -964,7 +960,7 @@
         "remove": "Entfernen",
         "custom_favicon": "Benutzerdefiniertes Favicon",
         "custom_code": "Benutzerdefinierter Code",
-        "custom_domain_not_classroomio": "Domain darf „classroomio“ nicht enthalten"
+        "custom_domain_not_classroomio": "Domain darf „classroomio" nicht enthalten"
       },
       "customize-lms": {
         "title": "LMS anpassen",
@@ -1304,7 +1300,8 @@
   },
   "login": {
     "welcome": "Willkommen zurück",
-    "email": "Deine E-Mail",
+    "welcome_back_to": "Willkommen zurück bei",
+    "email": "Ihre E-Mail",
     "password": "Ihr Passwort",
     "forgot": "Passwort vergessen?",
     "login": "Anmeldung",

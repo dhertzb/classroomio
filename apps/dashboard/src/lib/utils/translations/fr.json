@@ -20,9 +20,9 @@
     },
     "community": {
       "success": {
-        "comment_submitted": "Commentaire soumis !",
+        "comment_submitted": "Commentaire soumis !",
         "success_delete": "Supprimé avec succès",
-        "question_submitted": "Question soumise !"
+        "question_submitted": "Question soumise !"
       },
       "error": {
         "try_again": "Erreur - Veuillez réessayer plus tard",
@@ -374,7 +374,7 @@
                 "message": "Télécharger une image"
               },
               "name": {
-                "min_char": "Le nom est trop court, minimum 5 caractères"
+                "min_char": "Le nom est trop court, minimum 5 caractères"
               }
             }
           },
@@ -429,7 +429,7 @@
         "unlocked_certificate_subtitle": "Vous avez terminé ce cours et votre dévouement est évident. Téléchargez le certificat et partagez-le avec votre réseau comme preuve de vos compétences nouvellement acquises",
         "complete_to_download_subtitle": "Votre certificat sera disponible une fois que vous aurez terminé toutes les leçons et exercices de ce cours.",
         "complete_to_download_title": "Cours non terminé 😔",
-        "description_error": "La description ne peut pas dépasser 200 caractères",
+        "description_error": "La description ne peut pas dépasser 200 caractères",
         "characters": "personnages",
         "unexpected_error": "une erreur inattendue est apparue"
       },
@@ -515,7 +515,7 @@
           "accept_grade": "Accepter",
           "reject_grade": "Rejeter",
           "add_comment_placeholder": "laissez un commentaire",
-          "questions_tried": "Attribué ce score en raison du nombre total d'essais :",
+          "questions_tried": "Attribué ce score en raison du nombre total d'essais :",
           "delete_prompt": "Supprimer",
           "delete_error": "Échec de la suppression de la soumission",
           "delete_success": "Soumission supprimée avec succès"
@@ -640,13 +640,13 @@
               "graded": "Noté",
               "pending": "En attente",
               "submitted": "Soumis",
-              "status_pending": "Statut : En attente d'examen",
-              "status_graded": "Statut : Examen terminé",
-              "status_submitted": "Statut : Soumis"
+              "status_pending": "Statut : En attente d'examen",
+              "status_graded": "Statut : Examen terminé",
+              "status_submitted": "Statut : Soumis"
             },
             "edit_mode": {
               "delete_modal": "Supprimer le modal",
-              "sure": "Êtes-vous sûr de vouloir supprimer cet exercice ?",
+              "sure": "Êtes-vous sûr de vouloir supprimer cet exercice ?",
               "no": "Non, annule",
               "yes": "Oui, supprimer",
               "deleting": "Suppression...",
@@ -689,12 +689,12 @@
             "back": "Dos",
             "create_exercises": "Créez des exercices à partir de Notes avec l'IA",
             "choose_questions": "Choisissez le nombre de questions et d'options que vous souhaitez et l'IA vous aidera à créer un exercice à partir de votre note. Allons-y.",
-            "how_many_questions": "Combien de questions souhaitez-vous créer ?",
-            "how_many_options": "Combien d’options par question souhaitez-vous ?",
+            "how_many_questions": "Combien de questions souhaitez-vous créer ?",
+            "how_many_options": "Combien d'options par question souhaitez-vous ?",
             "add_note": "Veuillez ajouter une note pour utiliser cette fonctionnalité",
             "generate": "Générer",
             "completion": "Génération d'IA terminée",
-            "click_generate": "Cliquez sur « Générer » pour un peu de magie",
+            "click_generate": "Cliquez sur « Générer » pour un peu de magie",
             "options": {
               "from_scratch": "De zéro",
               "from_scratch_subtitle": "Créez votre exercice à partir de zéro si vous avez déjà préparé vos questions",
@@ -726,8 +726,8 @@
                 "add_video": "Ajouter une vidéo",
                 "upload_video": "Télécharger une video",
                 "select_file": "Sélectionnez le fichier (Mp4, MOV, AVI) à télécharger dans votre leçon.",
-                "size": "(Maximum 500 Mo)",
-                "oops": "Oups 😬, impossible de télécharger la vidéo",
+                "size": "(Maximum 500 Mo)",
+                "oops": "Oups 😬, impossible de télécharger la vidéo",
                 "big_file": "Désolé, la vidéo n'a pas été téléchargée. La taille du fichier est trop grande,",
                 "maximum_size": "la taille maximale est de 30 Mo. Essayer à nouveau!",
                 "button": "Essayez un autre fichier",
@@ -899,9 +899,9 @@
     "rephrase": "Reformuler",
     "insert": "Insérer",
     "can_you": "Pouvez-vous s'il vous plaît reformuler ceci",
-    "requirements": "Veuillez écrire quelques exigences nécessaires pour suivre ce cours :",
-    "description": "Veuillez rédiger une description détaillée de ce cours :",
-    "expectation": "Que doit espérer apprendre un étudiant de ce cours :"
+    "requirements": "Veuillez écrire quelques exigences nécessaires pour suivre ce cours :",
+    "description": "Veuillez rédiger une description détaillée de ce cours :",
+    "expectation": "Que doit espérer apprendre un étudiant de ce cours :"
   },
   "dashboard": {
     "morning_heading": "Bonjour",
@@ -938,7 +938,7 @@
   },
   "schedule": {
     "title": "Votre emploi du temps",
-    "essence": "L’essence de la collaboration en matière de conception",
+    "essence": "L'essence de la collaboration en matière de conception",
     "figma": "Présentation de Figma",
     "join": "Rejoindre l'appel",
     "no": "Pas de cours ce jour"
@@ -956,7 +956,7 @@
         "your_domain": "Votre domaine",
         "custom_domain_error": "Vous ne pouvez pas ajouter un domaine de premier niveau en tant que domaine personnalisé. Utilisez plutôt un sous-domaine tel que « courses.[votresite Web].com » ou « www.[votre site Web].com ».",
         "custom_domain_success": "Domaine personnalisé ajouté avec succès",
-        "dns_description": "Définissez l'enregistrement suivant sur votre fournisseur DNS pour continuer :",
+        "dns_description": "Définissez l'enregistrement suivant sur votre fournisseur DNS pour continuer :",
         "dns_type": "Taper",
         "dns_value": "Valeur",
         "dns_name": "Nom",
@@ -964,7 +964,7 @@
         "remove": "Retirer",
         "custom_favicon": "Icône de favori personnalisée",
         "custom_code": "Code personnalisé",
-        "custom_domain_not_classroomio": "Le domaine ne peut pas contenir « classroomio »"
+        "custom_domain_not_classroomio": "Le domaine ne peut pas contenir « classroomio »"
       },
       "customize-lms": {
         "title": "Personnaliser le LMS",
@@ -1027,8 +1027,8 @@
       "add_more": "+ Ajouter plus de réponses",
       "remove_last": "- Supprimer la dernière réponse",
       "quiz_delete": "Supprimer le questionnaire",
-      "delete_question": "Êtes-vous sûr de vouloir supprimer cette question ?",
-      "delete_quiz": "Etes-vous sûr de vouloir supprimer ce quiz ?",
+      "delete_question": "Êtes-vous sûr de vouloir supprimer cette question ?",
+      "delete_quiz": "Etes-vous sûr de vouloir supprimer ce quiz ?",
       "lose_content": "Vous perdrez votre contenu et cette action ne pourra pas être annulée.",
       "delete": "Supprimer",
       "update": "Mise à jour",
@@ -1156,7 +1156,7 @@
       "sub_heading": "Connectez votre compte à Telegram pour être informé de tout changement dans l'application.",
       "step_authenticate": "Étape 1 : Authentifiez votre compte via le bot SovietIO.",
       "open_bot_button": "Ouvrir le robot",
-      "step_chatId": "Étape 2 : Saisissez l’ID de chat qui vous a été fourni par le bot.",
+      "step_chatId": "Étape 2 : Saisissez l'ID de chat qui vous a été fourni par le bot.",
       "connect_button": "Connecter",
       "success_message": "Intégration réussie",
       "disconnect": "Déconnecter"
@@ -1269,7 +1269,7 @@
           "heading": "Personnaliser le LMS",
           "sub_heading": "Personnalisez le LMS de votre organisation",
           "button": "Personnaliser le LMS",
-          "body": "Contrôlez l’expérience d’apprentissage de vos étudiants. Vous pouvez activer ou désactiver les onglets et les pages, mettre à jour la bannière LMS et les commentaires dans l'application en fonction des besoins de votre organisation."
+          "body": "Contrôlez l'expérience d'apprentissage de vos étudiants. Vous pouvez activer ou désactiver les onglets et les pages, mettre à jour la bannière LMS et les commentaires dans l'application en fonction des besoins de votre organisation."
         }
       }
     },
@@ -1285,9 +1285,9 @@
       "profile_picture": {
         "heading": "Image de profil",
         "upload_image": "Télécharger une image",
-        "file_size": "Taille maximale du fichier :",
+        "file_size": "Taille maximale du fichier :",
         "accepted": "Accepté:",
-        "validation_error": "La taille du fichier dépasse la limite maximale :"
+        "validation_error": "La taille du fichier dépasse la limite maximale :"
       }
     },
     "tabs": {
@@ -1303,7 +1303,8 @@
     }
   },
   "login": {
-    "welcome": "Content de te revoir",
+    "welcome": "Bienvenue",
+    "welcome_back_to": "Bienvenue sur",
     "email": "Votre email",
     "password": "Votre mot de passe",
     "forgot": "Mot de passe oublié?",
@@ -1333,7 +1334,7 @@
   },
   "welcome_modal": {
     "we_at": "Nous à",
-    "small_team": "est une petite équipe avec une grande mission : doter les éducateurs d'une technologie de pointe pour les aider à former la génération future. L’éducation est le cadeau le plus puissant que vous puissiez offrir à quiconque, et il est tout à fait logique de vous donner tous les outils dont vous avez besoin pour offrir ce CADEAU à davantage de personnes.",
+    "small_team": "est une petite équipe avec une grande mission : doter les éducateurs d'une technologie de pointe pour les aider à former la génération future. L'éducation est le cadeau le plus puissant que vous puissiez offrir à quiconque, et il est tout à fait logique de vous donner tous les outils dont vous avez besoin pour offrir ce CADEAU à davantage de personnes.",
     "thank_you": "Merci de nous avoir choisi",
     "deeply_appreciate": "nous l'apprécions profondément et sommes à votre service."
   },
@@ -1394,7 +1395,7 @@
         "invalid_email": "Adresse e-mail invalide"
       },
       "full_name": {
-        "min_char": "Doit contenir au moins 6 caractères"
+        "min_char": "Doit contenir au moins 6 caractères"
       }
     },
     "confirm_password": {
@@ -1417,12 +1418,12 @@
     },
     "reset": {
       "password": {
-        "min_char": "Doit contenir au moins 6 caractères"
+        "min_char": "Doit contenir au moins 6 caractères"
       }
     },
     "auth": {
       "password": {
-        "min_char": "Doit contenir au moins 6 caractères"
+        "min_char": "Doit contenir au moins 6 caractères"
       },
       "email": {
         "invalid_email": "Adresse e-mail invalide"
@@ -1433,34 +1434,34 @@
     },
     "org_landing_page": {
       "message": {
-        "min_char": "Doit contenir au moins 10 caractères"
+        "min_char": "Doit contenir au moins 10 caractères"
       },
       "phone": {
-        "min_char": "Doit contenir au moins 6 caractères"
+        "min_char": "Doit contenir au moins 6 caractères"
       },
       "email": {
         "invalid_email": "Adresse e-mail invalide"
       },
       "name": {
-        "min_char": "Doit contenir au moins 6 caractères"
+        "min_char": "Doit contenir au moins 6 caractères"
       }
     },
     "comment_in_community": {
-      "min_char": "Doit contenir au moins 6 caractères"
+      "min_char": "Doit contenir au moins 6 caractères"
     },
     "ask_community": {
       "course_id": {
         "select_course": "Sélectionnez un cours"
       },
       "body": {
-        "min_char": "Doit contenir au moins 10 caractères"
+        "min_char": "Doit contenir au moins 10 caractères"
       },
       "title": {
-        "min_char": "Doit contenir au moins 6 caractères"
+        "min_char": "Doit contenir au moins 6 caractères"
       }
     },
     "create_quiz": {
-      "min_char": "Doit contenir au moins 6 caractères"
+      "min_char": "Doit contenir au moins 6 caractères"
     },
     "lesson_schema": {
       "empty_title": "Le titre ne peut pas être vide"
@@ -1473,13 +1474,13 @@
       "hyphen_rule": "Le nom du site ne peut pas commencer ou se terminer par un trait d'union"
     },
     "organization_name": {
-      "min_char": "L'organisation doit contenir 5 caractères ou plus",
+      "min_char": "L'organisation doit contenir 5 caractères ou plus",
       "hyphen_rule": "Le nom de l'organisation ne peut pas commencer ou se terminer par un trait d'union"
     },
     "user_profile": {
       "email": "Adresse e-mail invalide",
       "username": "Le nom d'utilisateur ne peut pas être vide",
-      "fullname": "Le nom doit comporter au minimum 5 caractères"
+      "fullname": "Le nom doit comporter au minimum 5 caractères"
     }
   },
   "explore": {

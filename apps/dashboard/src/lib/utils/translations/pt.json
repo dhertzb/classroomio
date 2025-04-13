@@ -1303,7 +1303,8 @@
     }
   },
   "login": {
-    "welcome": "bem vindo de volta",
+    "welcome": "Bem-vindo de volta",
+    "welcome_back_to": "Bem-vindo de volta ao",
     "email": "Seu email",
     "password": "Sua senha",
     "forgot": "Esqueceu sua senha?",

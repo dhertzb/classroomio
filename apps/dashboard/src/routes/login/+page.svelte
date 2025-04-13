@@ -52,7 +52,7 @@
 </script>
 
 <svelte:head>
-  <title>Welcome back to {$currentOrg.name || 'SovietIO'}</title>
+  <title>{$t('login.welcome_back_to')} {$currentOrg.name || 'SovietIO'}</title>
 </svelte:head>
 
 <AuthUI {supabase} isLogin={true} {handleSubmit} isLoading={loading} bind:formRef>
