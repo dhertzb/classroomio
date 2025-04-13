@@ -1,8 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import Avatar from '$lib/components/Avatar/index.svelte';
   import { t } from '$lib/utils/functions/translations';
-  import { currentOrg } from '$lib/utils/store/org';
   import type { SupabaseClient } from '@supabase/supabase-js';
 
   export let supabase: SupabaseClient;
@@ -50,19 +48,8 @@
     <div class="flex flex-col items-center p-2 lg:px-8 lg:py-3">
       {#if !showOnlyContent || showLogo}
         <div class="flex w-full flex-col items-center justify-center pt-2">
-          <Avatar
-            src={$currentOrg.avatar_url ? $currentOrg.avatar_url : '/logo-192.png'}
-            name={$currentOrg.name ? $currentOrg.name : 'SovietIO'}
-            shape="rounded-md"
-            width="w-10"
-            height="max-h-10"
-            className="mr-2"
-          />
-          <a href="/">
-            <h4 class="mt-0 text-xl dark:text-white">
-              {$currentOrg.name ? $currentOrg.name : 'SovietIO'}
-            </h4>
-          </a>
+          <h2 class="m-0 text-4xl text-red-700 dark:text-white">☭</h2>
+          <h4 class="mt-0 text-xl text-red-700 dark:text-white">SovietIO</h4>
         </div>
       {/if}
       <form
