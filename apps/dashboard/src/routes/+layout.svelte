@@ -6,7 +6,6 @@
   import Apps from '$lib/components/Apps/index.svelte';
   import { course } from '$lib/components/Course/store';
   import OrgNavigation from '$lib/components/Navigation/app.svelte';
-  import LandingNavigation from '$lib/components/Navigation/index.svelte';
   import LMSNavigation from '$lib/components/Navigation/lms.svelte';
   import OrgLandingPage from '$lib/components/Org/LandingPage/index.svelte';
   import PlayQuiz from '$lib/components/Org/Quiz/Play/index.svelte';
@@ -142,12 +141,12 @@
       {:else if isLMSPage($page.url?.pathname)}
         <LMSNavigation />
       {:else}
-        <LandingNavigation
+        <!-- <LandingNavigation
           isOrgSite={data.isOrgSite}
           logo={data.isOrgSite ? $currentOrg.avatar_url : undefined}
           orgName={data.isOrgSite ? $currentOrg.name : undefined}
           disableSignup={false}
-        />
+        /> -->
       {/if}
 
       <PageLoadProgressBar textColorClass="text-neutral-700" />

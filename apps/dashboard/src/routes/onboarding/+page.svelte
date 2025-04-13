@@ -1,23 +1,23 @@
 <script lang="ts">
-  import { env } from '$env/dynamic/public';
   import { goto } from '$app/navigation';
-  import { Dropdown } from 'carbon-components-svelte';
+  import { env } from '$env/dynamic/public';
   import TextField from '$lib/components/Form/TextField.svelte';
   import UserProfileIcon from '$lib/components/Icons/UserProfileIcon.svelte';
-  import PrimaryButton from '$lib/components/PrimaryButton/index.svelte';
   import { VARIANTS } from '$lib/components/PrimaryButton/constants';
-  import { profile } from '$lib/utils/store/user';
-  import { onboardingValidation } from '$lib/utils/functions/validator';
-  import { supabase } from '$lib/utils/functions/supabase';
+  import PrimaryButton from '$lib/components/PrimaryButton/index.svelte';
   import { blockedSubdomain } from '$lib/utils/constants/app';
-  import { getOrganizations } from '$lib/utils/services/org';
   import { generateSitename } from '$lib/utils/functions/org';
-  import {
-    triggerSendEmail,
-    NOTIFICATION_NAME
-  } from '$lib/utils/services/notification/notification';
+  import { supabase } from '$lib/utils/functions/supabase';
   import { handleLocaleChange, t } from '$lib/utils/functions/translations';
+  import { onboardingValidation } from '$lib/utils/functions/validator';
+  import {
+    NOTIFICATION_NAME,
+    triggerSendEmail
+  } from '$lib/utils/services/notification/notification';
+  import { getOrganizations } from '$lib/utils/services/org';
+  import { profile } from '$lib/utils/store/user';
   import { LOCALE } from '$lib/utils/types';
+  import { Dropdown } from 'carbon-components-svelte';
 
   interface OnboardingField {
     fullname?: string;
@@ -237,28 +237,28 @@
 </script>
 
 {#if $profile.id}
-  <div class="w-full min-h-screen flex justify-center">
-    <div class="flex justify-center items-center flex-col w-9/12 max-w-md">
+  <div class="flex min-h-screen w-full justify-center">
+    <div class="flex w-9/12 max-w-md flex-col items-center justify-center">
       <!-- Header With Logo -->
       <div class="flex flex-col items-center">
-        <div class="flex items-center w-full justify-center mb-4">
+        <div class="mb-4 flex w-full items-center justify-center">
           <img src="/logo-192.png" alt="SovietIO logo" height="50" width="50" data-atf="1" />
-          <h4 class="dark:text-white text-xl">SovietIO</h4>
+          <h4 class="sovietio-text text-xl dark:text-white">SovietIO</h4>
         </div>
 
         <!-- Loggedin Email -->
         <div
-          class="w-64 flex items-center justify-center mb-6 py-6 bg-gray-100 dark:bg-neutral-800 rounded-2xl border border-gray-300"
+          class="mb-6 flex w-64 items-center justify-center rounded-2xl border border-gray-300 bg-gray-100 py-6 dark:bg-neutral-800"
         >
           <UserProfileIcon />
-          <p class="dark:text-white text-sm ml-2">{$profile.email}</p>
+          <p class="ml-2 text-sm dark:text-white">{$profile.email}</p>
         </div>
       </div>
 
-      <div class="form-container overflow-y-auto w-full px-2">
+      <div class="form-container w-full overflow-y-auto px-2">
         {#if step === 1}
           <!-- Name/Organization Question -->
-          <div id="role-question" class="flex items-start flex-col mb-6">
+          <div id="role-question" class="mb-6 flex flex-col items-start">
             <!-- Full name -->
             <TextField
               label={$t('onboarding.fullname')}
@@ -304,17 +304,17 @@
           </div>
         {:else}
           <!-- Goal/Source Question -->
-          <div id="goal-question" class="flex items-center flex-col mb-6">
+          <div id="goal-question" class="mb-6 flex flex-col items-center">
             <div class="w-10/12">
               <!-- Goal Question -->
-              <div class="w-full flex items-start flex-col justify-between mb-10">
-                <label for="text-field" class="dark:text-white m-0 text-lg font-normal mb-3">
+              <div class="mb-10 flex w-full flex-col items-start justify-between">
+                <label for="text-field" class="m-0 mb-3 text-lg font-normal dark:text-white">
                   {$t('onboarding.what_brings')}
                 </label>
 
                 <!-- Loop through Goals -->
                 {#each educatorGoals as goal}
-                  <label class="dark:text-white w-full inline-flex items-center mb-1 font-light">
+                  <label class="mb-1 inline-flex w-full items-center font-light dark:text-white">
                     <input
                       type="radio"
                       bind:group={fields.goal}
@@ -334,14 +334,14 @@
               </div>
 
               <!-- Source Question -->
-              <div class="w-full flex items-start flex-col justify-between">
-                <label for="text-field" class="dark:text-white m-0 text-lg font-normal mb-3">
+              <div class="flex w-full flex-col items-start justify-between">
+                <label for="text-field" class="m-0 mb-3 text-lg font-normal dark:text-white">
                   {$t('onboarding.how')}
                 </label>
 
                 <!-- Loop through Goals -->
                 {#each sources as source}
-                  <label class="dark:text-white w-full inline-flex items-center mb-1 font-light">
+                  <label class="mb-1 inline-flex w-full items-center font-light dark:text-white">
                     <input
                       type="radio"
                       bind:group={fields.source}
@@ -376,10 +376,10 @@
       </div>
 
       <!-- Footer -->
-      <div class="flex justify-between items-center mt-8 w-full">
-        <div class="w-24 h-2 bg-gray-300 relative">
+      <div class="mt-8 flex w-full items-center justify-between">
+        <div class="relative h-2 w-24 bg-gray-300">
           <span
-            class="progress absolute top-0 left-0 bg-primary-700 h-full"
+            class="progress bg-primary-700 absolute left-0 top-0 h-full"
             style="width: {progress}%;"
           />
         </div>

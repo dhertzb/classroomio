@@ -1,19 +1,16 @@
 <script lang="ts">
-  import { page } from '$app/stores';
   import { browser } from '$app/environment';
-  import NotificationIcon from 'carbon-icons-svelte/lib/Notification.svelte';
+  import { page } from '$app/stores';
   import MoonIcon from 'carbon-icons-svelte/lib/Moon.svelte';
+  import NotificationIcon from 'carbon-icons-svelte/lib/Notification.svelte';
   import SunIcon from 'carbon-icons-svelte/lib/Sun.svelte';
-  import Avatar from '$lib/components/Avatar/index.svelte';
-  import TextChip from '$lib/components/Chip/Text.svelte';
 
   import IconButton from '$lib/components/IconButton/index.svelte';
-  import { globalStore } from '$lib/utils/store/app';
-  import { Close, Menu } from 'carbon-icons-svelte';
   import { sideBar } from '$lib/components/Org/store';
-  import { currentOrg } from '$lib/utils/store/org';
   import { toggleBodyByMode } from '$lib/utils/functions/app';
   import { t } from '$lib/utils/functions/translations';
+  import { globalStore } from '$lib/utils/store/app';
+  import { Close, Menu } from 'carbon-icons-svelte';
 
   export let navClass = '';
 
@@ -35,7 +32,7 @@
   }
 </script>
 
-<nav class="{navClass} flex w-full p-2 md:px-6 bg-primary-700 h-[48px]">
+<nav class="{navClass} bg-primary-700 flex h-[48px] w-full p-2 md:px-6">
   <ul class="flex w-full items-center">
     <li class="md:hidden">
       <IconButton onClick={toggleSidebar}>
@@ -50,18 +47,17 @@
       <a
         href={$page.url.pathname}
         title={$t('navigation.goto_home')}
-        class="text-lg flex items-center"
+        class="flex items-center text-lg hover:no-underline"
       >
-        <span class="line-clamp-1">
-          ☭ SovietIO
-        </span>
+        <span class="pr-2 text-3xl text-white">☭</span>
+        <span class="sovietio-text line-clamp-1"> SovietIO </span>
       </a>
     </div>
 
     <span class="flex-grow" />
 
     <li>
-      <NotificationIcon size={20} class="text-white mr-2" />
+      <NotificationIcon size={20} class="mr-2 text-white" />
     </li>
     <li>
       <IconButton size="small" onClick={toggleDarkMode}>

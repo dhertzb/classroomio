@@ -1,19 +1,19 @@
 <script>
-  import { goto } from '$app/navigation';
   import { browser } from '$app/environment';
-  import NotificationIcon from 'carbon-icons-svelte/lib/Notification.svelte';
-  import Moon from 'carbon-icons-svelte/lib/Moon.svelte';
-  import Sun from 'carbon-icons-svelte/lib/Sun.svelte';
-  import Menu from 'carbon-icons-svelte/lib/Menu.svelte';
-  import Close from 'carbon-icons-svelte/lib/Close.svelte';
+  import { goto } from '$app/navigation';
   import ArrowLeft from 'carbon-icons-svelte/lib/ArrowLeft.svelte';
+  import Close from 'carbon-icons-svelte/lib/Close.svelte';
+  import Menu from 'carbon-icons-svelte/lib/Menu.svelte';
+  import Moon from 'carbon-icons-svelte/lib/Moon.svelte';
+  import NotificationIcon from 'carbon-icons-svelte/lib/Notification.svelte';
+  import Sun from 'carbon-icons-svelte/lib/Sun.svelte';
 
   import IconButton from '$lib/components/IconButton/index.svelte';
+  import { toggleBodyByMode } from '$lib/utils/functions/app';
+  import { t } from '$lib/utils/functions/translations';
   import { globalStore } from '$lib/utils/store/app';
   import { currentOrgPath } from '$lib/utils/store/org';
-  import { toggleBodyByMode } from '$lib/utils/functions/app';
   import { sideBar } from '../Org/store';
-  import { t } from '$lib/utils/functions/translations';
 
   export let title = '';
   export let navClass = '';
@@ -41,7 +41,7 @@
 </script>
 
 <nav
-  class="{navClass} flex w-full p-1 md:px-6 bg-primary-700 transition delay-150 duration-300 ease-in-out h-[48px]"
+  class="{navClass} bg-primary-700 flex h-[48px] w-full p-1 transition delay-150 duration-300 ease-in-out md:px-6"
 >
   <ul class="flex w-full items-center">
     <div class="flex items-center text-white">
@@ -81,7 +81,7 @@
           ? $t('navigation.courses')
           : $t('navigation.classroomio_home')}"
         id="logo"
-        class="text-lg line-clamp-1"
+        class="sovietio-text line-clamp-1 text-lg"
       >
         {isCoursePage ? title : 'SovietIO'}
       </a>
@@ -90,7 +90,7 @@
     <span class="flex-grow" />
 
     <li>
-      <NotificationIcon size={20} class="text-white mr-2" />
+      <NotificationIcon size={20} class="mr-2 text-white" />
     </li>
     <li>
       <IconButton size="small" onClick={toggleDarkMode}>

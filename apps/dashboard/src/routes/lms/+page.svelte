@@ -91,20 +91,19 @@
           {$t('dashboard.your_progress')}
         </p>
         <div
-          class="flex h-fit items-center justify-center gap-2 rounded border border-[#EAEAEA] p-3 dark:bg-neutral-800 lg:h-[40vh] lg:overflow-y-auto"
+          class="flex items-center justify-center gap-2 rounded border border-[#EAEAEA] p-10 p-3 dark:bg-neutral-800 lg:overflow-y-auto"
         >
           <div
             class="flex h-full w-full flex-col items-center justify-between gap-5 sm:flex-row lg:items-center lg:justify-around xl:flex-col xl:items-start"
           >
-            <div>
-              <img src="/images/target.svg" alt="student Learning score" />
-            </div>
             <span class="text-center xl:text-start">
-              <p class="py-2 text-base font-semibold text-[#040F2D] dark:text-white">
-                {$t('dashboard.your_progress')}
-              </p>
               {#if totalLessons > 0}
-                <p class="text-xs font-normal text-[#656565] dark:text-white">
+                <h1
+                  class="my-0 whitespace-nowrap text-5xl font-bold text-[#262626] dark:text-white lg:text-6xl"
+                >
+                  {progressPercentage} %
+                </h1>
+                <p class="ml-1 mt-2 text-xs font-normal text-[#656565] dark:text-white">
                   {totalCompleted}/{totalLessons}
                   {$t('dashboard.lessons_completed')}
                 </p>
@@ -114,11 +113,6 @@
                 </p>
               {/if}
             </span>
-            <h1
-              class="my-0 whitespace-nowrap text-5xl font-bold text-[#262626] dark:text-white lg:text-6xl"
-            >
-              {progressPercentage} %
-            </h1>
           </div>
         </div>
       </div>

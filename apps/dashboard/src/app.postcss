@@ -1,29 +1,24 @@
 /*Write your global styles here, in PostCSS syntax */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quantico:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /** Global scrollbar styles */
-html {
+html, body, #root, #__next {
   --scrollbarBG: #fff;
   --thumbBG: #ccc;
   scroll-behavior: smooth;
-  font-family:
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    Segoe UI,
-    Roboto,
-    Helvetica Neue,
-    Arial,
-    Noto Sans,
-    sans-serif,
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
-    Segoe UI Symbol,
-    'Noto Color Emoji' !important;
+  font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+/* Special font for sovietIO text */
+.sovietio-text {
+  font-family: 'Quantico', cursive !important;
+  font-weight: 600;
 }
 
 #calendar .grid {

@@ -49,7 +49,7 @@
       {#if !showOnlyContent || showLogo}
         <div class="flex w-full flex-col items-center justify-center pt-2">
           <h2 class="m-0 text-4xl text-red-700 dark:text-white">☭</h2>
-          <h4 class="mt-0 text-xl text-red-700 dark:text-white">SovietIO</h4>
+          <h4 class="sovietio-text mt-0 text-xl text-red-700 dark:text-white">SovietIO</h4>
         </div>
       {/if}
       <form
