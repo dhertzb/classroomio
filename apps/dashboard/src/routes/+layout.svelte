@@ -175,13 +175,13 @@
   :global(:root) {
     --main-primary-color: rgba(29, 78, 216, 1);
     --border-color: #eaecef;
-    --app-background-color: #fafbfc;
+    --app-background-color: #ee8888;
     --app-background: radial-gradient(
       circle at 10% 20%,
-      rgb(239, 246, 249) 0%,
-      rgb(206, 239, 253) 90%
+      rgb(255, 255, 255) 0%,
+      rgb(253, 208, 206) 90%
     );
-    --dark-app-background: radial-gradient(circle at 10% 20%, rgb(0 0 0) 0%, rgb(27 60 74) 90%);
+    --dark-app-background: radial-gradient(circle at 10% 20%, rgb(0 0 0) 0%, rgb(117, 20, 20) 90%);
   }
 
   :global(.app-background) {
