@@ -1,5 +1,4 @@
 <script>
-  import SenjaEmbed from '$lib/Senja/Embed.svelte';
 </script>
 
 <section id="testimonial" class="flex flex-col items-center py-[5%] px-3 lg:px-0">
@@ -21,8 +20,4 @@
   >
     Sign Up for Free
   </a>
-
-  <div class="relative my-5 md:my-10 w-[85%] lg:w-[70%]">
-    <SenjaEmbed id="3e847d7a-13d3-483e-8a71-5b35273dcc6c" />
-  </div>
 </section>

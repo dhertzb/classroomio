@@ -4,7 +4,6 @@
   import AuthUI from '$lib/components/AuthUI/index.svelte';
   import TextField from '$lib/components/Form/TextField.svelte';
   import PrimaryButton from '$lib/components/PrimaryButton/index.svelte';
-  import SenjaEmbed from '$lib/components/Senja/Embed.svelte';
   import { SIGNUP_FIELDS } from '$lib/utils/constants/authentication';
   import { getSupabase } from '$lib/utils/functions/supabase';
   import { t } from '$lib/utils/functions/translations';
@@ -114,8 +113,6 @@
 <svelte:head>
   <title>{$t('login.create_to_join')}</title>
 </svelte:head>
-
-<SenjaEmbed id="aa054658-1e15-4d00-8920-91f424326c4e" />
 
 <AuthUI {supabase} isLogin={false} {handleSubmit} isLoading={loading} bind:formRef>
   <div class="mt-4 w-full">

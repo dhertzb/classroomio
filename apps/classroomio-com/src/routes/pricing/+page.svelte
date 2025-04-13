@@ -1,9 +1,9 @@
 <script>
-  import { fade } from 'svelte/transition';
+  import PageHeader from '$lib/PageHeader/PageHeader.svelte';
+  import PageSignupCTA from '$lib/PageSignupCTA/index.svelte';
   import Checkmark from 'carbon-icons-svelte/lib/Checkmark.svelte';
   import PLANS from 'shared/src/plans/data.json';
-  import PageSignupCTA from '$lib/PageSignupCTA/index.svelte';
-  import PageHeader from '$lib/PageHeader/PageHeader.svelte';
+  import { fade } from 'svelte/transition';
 
   let isYearlyPlan = false;
 
@@ -48,19 +48,6 @@
         Save 2 months
       </div>
     </div>
-
-    <script
-      src="https://widget.senja.io/widget/b43ac234-427e-4d6f-8c23-633208154e54/platform.js"
-      type="text/javascript"
-      async
-    ></script>
-    <div
-      class="senja-embed mt-5"
-      data-id="b43ac234-427e-4d6f-8c23-633208154e54"
-      data-mode="shadow"
-      data-lazyload="false"
-      style="display: block;"
-    ></div>
   </PageHeader>
 
   <div class="flex flex-col items-center justify-center px-[6%]">
@@ -113,11 +100,14 @@
         </p>
 
         {#key isYearlyPlan}
-          <p class="mt-6 flex items-baseline gap-x-1 text-4xl font-medium text-white lg:text-4xl" in:fade>
+          <p
+            class="mt-6 flex items-baseline gap-x-1 text-4xl font-medium text-white lg:text-4xl"
+            in:fade
+          >
             ${isYearlyPlan ? PLANS.EARLY_ADOPTER.PRICE.YEARLY : PLANS.EARLY_ADOPTER.PRICE.MONTHLY}
           </p>
           <span class="text-base text-white" in:fade>
-            per {isYearlyPlan ? 'year': 'month'}
+            per {isYearlyPlan ? 'year' : 'month'}
           </span>
         {/key}
 
