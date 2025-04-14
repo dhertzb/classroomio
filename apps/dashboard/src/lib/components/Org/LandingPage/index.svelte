@@ -167,7 +167,7 @@
 
 <svelte:head>
   <title>
-    {!org?.name ? '' : `${org.name}'s `}{$t('course.navItem.landing_page.landing_page')}
+    {$t('course.navItem.landing_page.landing_page')}
   </title>
 </svelte:head>
 
@@ -203,9 +203,9 @@
             >
               <!-- Course Description -->
               <div class="mr-3 flex w-11/12 flex-col items-center py-10 md:w-2/5 md:items-start">
-                <p class=" text-primary-600 text-2xl font-semibold capitalize">
+                <!-- <p class=" text-primary-600 text-2xl font-semibold capitalize">
                   {org.name}
-                </p>
+                </p> -->
                 <h1
                   class="my-4 text-center text-4xl font-bold md:text-start md:text-5xl lg:text-6xl"
                 >

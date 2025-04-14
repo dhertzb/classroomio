@@ -22,16 +22,11 @@
   class="{navClass} {backgroundColor} sticky top-0 z-50 flex w-full border-b border-l-0 border-r-0 border-t-0 border-gray-300 px-2 py-1"
 >
   <ul class="flex w-full items-center">
-    <div class="logo">
-      <a
-        href="/"
-        title={$t('navigation.goto_home')}
-        class="flex items-center text-lg hover:no-underline"
-        data-hveid="8"
-      >
-        <span class="pr-2 text-3xl text-white">☭</span>
-        <span class="sovietio-text line-clamp-1"> SovietIO </span>
-      </a>
+    <div
+      class="flex flex-row items-center text-lg hover:no-underline"
+    >
+      <span class="pr-2 text-3xl">☭</span>
+      <span class="sovietio-text line-clamp-1"> SovietIO </span>
     </div>
 
     {#if $user.isLoggedIn}
