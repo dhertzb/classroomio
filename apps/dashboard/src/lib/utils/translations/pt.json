@@ -934,7 +934,8 @@
     "publish_first_course": "Publique seu primeiro curso",
     "publish_first_course_description": "Para rastrear matrículas, publicar um curso e convidar alunos",
     "publish_course": "Publicar curso",
-    "student": "estudante"
+    "student": "estudante",
+    "title": "Painel do Estudante - SovietIO"
   },
   "schedule": {
     "title": "Sua programação",
