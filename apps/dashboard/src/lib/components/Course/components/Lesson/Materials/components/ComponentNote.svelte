@@ -1,12 +1,11 @@
 <script lang="ts">
-  import HtmlRender from '$lib/components/HTMLRender/HTMLRender.svelte';
-  import { isHtmlValueEmpty } from '$lib/utils/functions/toHtml';
   import {
     lesson,
     lessonByTranslation
   } from '$lib/components/Course/components/Lesson/store/lessons';
-  import { t } from '$lib/utils/functions/translations';
-  import { lessonFallbackNote } from '$lib/utils/functions/translations';
+  import HtmlRender from '$lib/components/HTMLRender/HTMLRender.svelte';
+  import { isHtmlValueEmpty } from '$lib/utils/functions/toHtml';
+  import { lessonFallbackNote, t } from '$lib/utils/functions/translations';
 
   export let lessonId: string;
 
@@ -16,7 +15,7 @@
     $lesson.locale
   );
   $: hasAtLeastOneTranslation = Object.values($lessonByTranslation[lessonId] || {}).some(
-    (c) => !!c.length
+    (c) => !!c?.length
   );
 </script>
 
@@ -29,8 +28,8 @@
     </svelte:fragment>
   </HtmlRender>
 {:else if hasAtLeastOneTranslation}
-  <div class="flex items-center justify-center flex-col text-center">
-    <h3 class="text-lg font-normal italic dark:text-white py-2">
+  <div class="flex flex-col items-center justify-center text-center">
+    <h3 class="py-2 text-lg font-normal italic dark:text-white">
       {$t('course.navItem.lessons.materials.no_translation')}
     </h3>
   </div>
