@@ -143,10 +143,8 @@
       <div class="mb-6">
         {#if courseData?.metadata?.allowNewStudent}
           <p class="text-lg font-medium dark:text-white">
-            {formatter?.format(calculatedCost) || calculatedCost}
-            {#if isFree}
-              <span class="text-sm">({$t('course.navItem.landing_page.pricing_section.free')})</span
-              >
+            {#if !isFree}
+              {formatter?.format(calculatedCost) || calculatedCost}
             {/if}
           </p>
           {#if courseData?.metadata?.showDiscount}
