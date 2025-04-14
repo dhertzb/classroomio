@@ -19,7 +19,6 @@
   import Avatar from '$lib/components/Avatar/index.svelte';
   import { VARIANTS } from '$lib/components/PrimaryButton/constants';
   import PrimaryButton from '$lib/components/PrimaryButton/index.svelte';
-  import WelcomeModal from '$lib/components/WelcomeModal/WelcomeModal.svelte';
   import { getGreeting } from '$lib/utils/functions/date';
   import { t } from '$lib/utils/functions/translations';
   import { isOrgAdmin } from '$lib/utils/store/org';
@@ -90,8 +89,6 @@
 <svelte:head>
   <title>Dashboard - SovietIO</title>
 </svelte:head>
-
-<WelcomeModal />
 
 <div class="w-full max-w-5xl px-5 py-10 md:mx-auto">
   <div class="mb-5 flex items-center justify-between">
