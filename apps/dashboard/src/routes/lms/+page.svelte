@@ -47,7 +47,7 @@
 </script>
 
 <svelte:head>
-  <title>Student Dashboard - SovietIO</title>
+  <title>{$t('dashboard.title')}</title>
 </svelte:head>
 
 <section class="mx-auto max-w-6xl gap-5">
