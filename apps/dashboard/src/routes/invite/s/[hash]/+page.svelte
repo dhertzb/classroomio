@@ -1,22 +1,22 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
-  import { onMount } from 'svelte';
-  import PrimaryButton from '$lib/components/PrimaryButton/index.svelte';
-  import { getSupabase } from '$lib/utils/functions/supabase';
+  import { page } from '$app/stores';
   import AuthUI from '$lib/components/AuthUI/index.svelte';
-  import { currentOrg } from '$lib/utils/store/org';
+  import PrimaryButton from '$lib/components/PrimaryButton/index.svelte';
+  import { snackbar } from '$lib/components/Snackbar/store.js';
+  import { ROLE } from '$lib/utils/constants/roles';
+  import { getSupabase } from '$lib/utils/functions/supabase';
   import { setTheme } from '$lib/utils/functions/theme';
   import { addGroupMember } from '$lib/utils/services/courses';
-  import type { CurrentOrg } from '$lib/utils/types/org.js';
-  import { ROLE } from '$lib/utils/constants/roles';
-  import { profile } from '$lib/utils/store/user';
   import {
-    triggerSendEmail,
-    NOTIFICATION_NAME
+    NOTIFICATION_NAME,
+    triggerSendEmail
   } from '$lib/utils/services/notification/notification';
-  import { snackbar } from '$lib/components/Snackbar/store.js';
   import { capturePosthogEvent } from '$lib/utils/services/posthog';
-  import { page } from '$app/stores';
+  import { currentOrg } from '$lib/utils/store/org';
+  import { profile } from '$lib/utils/store/user';
+  import type { CurrentOrg } from '$lib/utils/types/org.js';
+  import { onMount } from 'svelte';
 
   export let data;
 
@@ -138,13 +138,13 @@
   bind:formRef
 >
   <div class="mt-0 w-full">
-    <h3 class="dark:text-white text-lg font-medium mt-0 mb-4 text-center">{data.name}</h3>
-    <p class="dark:text-white text-sm font-light text-center">{data.description}</p>
+    <h3 class="mb-4 mt-0 text-center text-lg font-medium dark:text-white">{data.name}</h3>
+    <p class="text-center text-sm font-light dark:text-white">{data.description}</p>
   </div>
 
-  <div class="my-4 w-full flex justify-center items-center">
+  <div class="my-4 flex w-full items-center justify-center">
     <PrimaryButton
-      label="Join Course"
+      label="Entrar no curso"
       type="submit"
       isDisabled={disableSubmit || loading}
       isLoading={loading}
